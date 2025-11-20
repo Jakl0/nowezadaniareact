@@ -6,7 +6,7 @@ const ContactForm = () =>{
     const {register , handleSubmit} = useForm();
 
     function onSubmit(data){
-        alert(data.message);
+        console.log(data);
     }
     return(
      <>
