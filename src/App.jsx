@@ -11,12 +11,13 @@ import FormComponent from './components/Form';
 import FeedBackForm from './components/FeedbackForm';
 import TaskForm from './components/TaskForm';
 import UserForm from './components/TaskForm';
+import ProductForm from './components/ProductForm';
 function App() {
   
   return (
    <div> 
 
-      <UserForm/>
+      <ProductForm/>
 
     </div> 
   );
