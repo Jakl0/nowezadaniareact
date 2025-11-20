@@ -13,12 +13,13 @@ import TaskForm from './components/TaskForm';
 import UserForm from './components/TaskForm';
 import ProductForm from './components/ProductForm';
 import ContactForm from './components/ContactForm';
+import BookingForm from './components/BookingForm';
 function App() {
   
   return (
    <div> 
 
-      <ContactForm/>
+      <BookingForm/>
 
     </div> 
   );

@@ -1,12 +1,16 @@
 import {useForm} from "react-hook-form";
 import react from 'react';
 
-const ContactForm = () =>{
+const BookingForm = () =>{
 
     const {register , handleSubmit} = useForm();
 
     function onSubmit(data){
-        alert(data.message);
+        const a = data.name;
+        const b = data.mail;
+        const c = data.date;
+        const d = data.ticketCount;
+        alert(`Imie i Nazwisko: ${a} email: ${b} data: ${c} ilość biletów: ${d}`);
     }
     return(
      <>
@@ -17,7 +21,7 @@ const ContactForm = () =>{
 
     <div className="mb-3"> 
 
-        <label htmlFor="name" className="form-label">nazwa</label> 
+        <label htmlFor="name" className="form-label">Imie i Nazwisko</label> 
 
         <input type="text" id="name" className="form-control" {...register("name")} /> 
 
@@ -33,9 +37,16 @@ const ContactForm = () =>{
       </div>
       <div className="mb-3"> 
 
-        <label htmlFor="feed" className="form-label">Wiadomość </label> 
+        <label htmlFor="dat" className="form-label">Data </label> 
 
-        <input type="text" id="feed" className="form-control" {...register("message")}/> 
+        <input type="date" id="dat" className="form-control" {...register("date")}/> 
+
+      </div>
+      <div className="mb-3"> 
+
+        <label htmlFor="tick" className="form-label">Ilość biletów </label> 
+
+        <input type="number" id="tick" className="form-control" {...register("ticketCount")}/> 
 
       </div>
 
@@ -49,4 +60,4 @@ const ContactForm = () =>{
     );
 
 }
-export default ContactForm;
+export default BookingForm;
